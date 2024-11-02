@@ -1,0 +1,511 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: black;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: black;
+  transform: rotate(180deg);
+}
+
+.logo {
+  height: 32px;
+}
+
+.links a {
+  color: black;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+
+.links a:hover {
+  background: #f0f0f0;
+  color: black;
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.show-links {
+  height: 10rem;
+}
+
+/*
+.nav-secondary{
+  display:none;
+}
+*/
+.nav-secondary {
+  border-top: 1px solid #d3d3d3;
+  height: 34px;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: .25rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+}
+
+.located {
+  display: flex;
+}
+
+.call {
+  display: flex;
+}
+
+/*
+=============== 
+Main
+===============
+*/
+.hero {
+  height: 700px;
+  width: 100%;
+  background: url('images/cover3-1.jpg') 50% no-repeat;
+  /* 'fixed' gives it the cool roll-over effect */
+  background-size: cover;
+  /*background-position:bottom; */
+  background-position-y: bottom;
+  background-position-x: 75%;
+  /*position:relative;*/
+}
+
+.heroInner {
+  /*position:absolute;*/
+  height: 100%;
+  padding: 8px;
+}
+
+.heroTitle {
+  color: white;
+  font-size: 3.5rem;
+  margin-top: 150px;
+}
+
+.heroText {
+  color: white;
+  margin-top: 2rem;
+  padding-left: 4px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 15%;
+  /*mix-blend-mode: screen;*/
+  /*color: transparent;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 175px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: transparent;
+  color: white;
+}
+
+.what {
+  height: 400px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what h2 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.menu {
+  padding: 5rem 0;
+  
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: transparent;
+  border:none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 96px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+/* Bottom border matches height for animated underline below */
+/* Padding is adjusted to compensate for added height due to border */
+.active{
+  border-bottom:3px solid black;
+  padding-top:12px;
+  padding-bottom:8px;
+}
+
+/* For animated underline */
+.filter-btn::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 96px;
+  height: 3px;
+  margin-top:8.5px;
+  background: #000;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(0);
+}
+
+/* For Animated underline */
+.filter-btn:hover::after{
+  transform: scale(1);
+}
+
+/* Disables animated underline from active */
+.active:hover:after{
+  transform:scale(0);
+}
+
+/* Disables pesky block and animation after underlined as active */
+.active::after{
+  content:"";
+  display:none;
+}
+
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+
+.photo {
+  object-fit: cover;
+  height: 200px;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+
+.item-info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: var(--clr-gold);
+}
+
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.extraSpace {
+  border-bottom: 1px solid gray;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.extraSpace2{
+  border-bottom: 1px solid gray;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 110px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.flex-item-left {
+  width: 100%;
+  flex: 50%;
+  background-image: url(images/aboutImage2.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+.aboutText {
+  padding: 16px;
+}
+
+.footerDiv {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: space-between;
+  padding: 1rem;
+  /*text-align:center;*/
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerText {
+  font-size: .9rem;
+}
+
+.footerLeft {
+  width: 50%;
+  /*border:1px solid red;*/
+}
+
+.footerRight {
+  width: 50%;
+  text-align: right;
+}
+
+/*
+=============== 
+Media Queries
+===============
+*/
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+
+  .photo {
+    height: 175px;
+  }
+
+  .footerRight {
+    width: 28%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links {
+    height: auto;
+    display: flex;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+  .heroInner {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .filter-btn {
+    width: 156px;
+  }
+  .filter-btn::after{
+    width: 156px;
+  }
+
+  .flex-item-left {
+    width: 641px;
+    margin: 0 auto;
+  }
+
+  .aboutText {
+    text-align: center;
+  }
+
+  .extraSpace{
+    margin-bottom:50px;
+  }
+  .extraSpace2{
+    margin-bottom:130px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .filter-btn {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .flex-container {
+    flex-direction: row;
+    height: 400px;
+  }
+
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo {
+    height: 150px;
+  }
+
+  .footerRight {
+    width: 20%;
+  }
+}

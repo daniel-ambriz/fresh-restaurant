@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Restaurant</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="images/logo.png" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="index.html" class="linkNav">home</a>
+          </li>
+          <li>
+            <a href="#menu" class="linkNav">menu</a>
+          </li>
+          <li>
+            <a href="#about" class="linkNav">about</a>
+          </li>
+          <!--
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        -->
+        </ul>
+      </div>
+      <div class="nav-secondary">
+        <div class="located">
+          <i class="fa-solid fa-location-dot" style="padding-top:3px;"></i>
+          <p style="margin-left:5px">Tucson Airport</p>
+        </div>
+        <div class="call">
+          <i class="fa-solid fa-phone" style="padding-top:3px;"></i>
+          <p style="margin-left:5px;">667-456-7789</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <section class="heroInner">
+        <h2 class="heroTitle">Fresh Burgers & More</h2>
+        <p class="heroText">Bring your vegeterian and carnivorous friends 
+          to enjoy <br>world-class burgers with an ice cold drink!
+          <br><br>
+          We currently take orders by phone:)
+        </p>
+        <div>
+          <a href="#menu"><button class="button">Menu Items</button></a>
+          <button class="button button2">Call Now</button>
+        </div>
+        
+      </section>
+    </div>
+
+    <div class="what">
+      <h2>Fresh Restaurant:<br> A veggie-friendly lunch destination.</h2>
+      <p style="text-align:center; padding:16px;">Fresh Restaurant is a new restaurant established in March 2023 
+        located at the 9 Points Airport hotel. With easy 
+        access to International Airport, make a stop and eat 
+        at Fresh Restaurant before or after your flight. Guests can 
+        enjoy a memorable experience with authentic cuisine with a 
+        flair for breakfast, lunch, and dinner. Our menu offers 
+        vegetarian-friendly options for green machine people.</p>
+    </div>
+
+    <div class="extraSpace" id="menu"></div>
+
+    <section class="menu" >
+      <!-- title -->
+      <div class="title">
+        <h2>Menu</h2>
+        <div class="underline"></div>
+      </div>
+      <!-- filter buttons -->
+      <!-- data- in data-id lets you access it with dataset in js code -->
+      <div class="btn-container" id="btn-container">
+        <button class="filter-btn active" type="button"
+        data-id="all">All</button>
+        <button class="filter-btn" type="button"
+        data-id="carnivore">Carnivore</button>
+        <button class="filter-btn" type="button"
+        data-id="veggie">Vegeterian</button>
+        <button class="filter-btn" type="button"
+        data-id="sides">Sides</button>
+      </div>
+      <!-- menu items -->
+      <div class="section-center">
+        <!-- single item -->
+        <article class="menu-item">
+          <img src="./images/item-1.jpg" class="photo" alt="menu item" />
+          <div class="item-info">
+            <header>
+              <h4>Deer Rancher</h4>
+              <h4 class="price">$15</h4>
+            </header>
+            <p class="item-text">
+              Check out our good menu! Enable javascript to see 
+              our full menu!
+            </p>
+          </div>
+        </article> 
+        <!-- end of single item-->
+      </div>
+    </section>
+
+    <div class="extraSpace2" id="about"></div>
+
+    <div class="title">
+      <h2>About Us</h2>
+      <div class="underline"></div>
+    </div> 
+
+    <div class="flex-container">
+      <div class="flex-item-left"></div>
+      <div class="flex-item-right">
+        <div class="what">
+          <p class="aboutText">
+            Chef Tony is a Denver native with a background in
+             all-natural foods. He owns a farm in Boulder, where 
+             he raises deer, bison, and chickens. You can rest
+             assured that everything you get on your plate was grown 
+             or raised less than 2 hours away! 
+            <br>
+            <br>
+            As a graduate from the Art Institute of Michigan, Chef 
+             Tony would like the world to know that being a vegetarian 
+             does not mean that everything has to taste green, and 
+             also that being a carnivore doesn't mean that you won't 
+             be hooked on juicy veggie burgers from Fresh Restaurant! 
+          </p> 
+          <img src="images/signature.png" style="width:50%; padding-left:20px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="extraSpace" style="margin-top:100px;"></div>
+
+    <footer>
+      <div class="footerDiv">
+        <div class="footerLeft">
+          <img src="images/logo.png" class="logo">
+          <p class="footerText" style="margin-top:1rem;">
+             321 Denver Airport
+             <br>
+             Denver Co, 24689
+             <br><br>
+             Open daily: 5am - 11pm
+          </p>
+          
+        </div>
+        <div class="footerRight">
+          <p style="margin-top:.25rem;"><b>Contact Info:</b></p>
+             <p class="footerText">
+             Phone: 667-456-7789
+             <br><br><br>
+             Email: hello@freshr.com
+             </p>
+        </div>
+      </div>
+      <p class="footerText" style="text-align:center;">Fresh Restaurant Copyright &copy; 2025</p>
+    </footer>
+
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
